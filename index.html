@@ -1,9 +1,10 @@
 <html>
  <head>
   <title>Test</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  </head>
 	 <body>
-		 <form>
+		 <form id="check">
 		 	<div id="q1">
 			 	<h2>Is it a System Down?</h2>
 			 	<select>
@@ -11,21 +12,21 @@
 				  <option value="no">No</option>
 				</select>
 			</div>
-			<div id="q2">
+			<div id="q2" style="display:none">
 			 	<h2>Have all support resources been exhausted?</h2>
 			 	<select>
 				  <option value="yes">Yes</option>
 				  <option value="no">No</option>
 				</select>
 			</div>
-			<div id="q3">
+			<div id="q3" style="display:none">
 			 	<h2>Is Code level knowledge required to solve the problem?</h2>
 			 	<select>
 				  <option value="yes">Yes</option>
 				  <option value="no">No</option>
 				</select>
 			</div>
-			<div id="q4">
+			<div id="q4" style="display:none">
 			 	<h2>Is assistance required before Taipei comes online at 20:00 Eastern time on Sunday &/or it can't wait until Monday?</h2>
 			 	<select>
 				  <option value="yes">Yes</option>
@@ -33,8 +34,18 @@
 				</select>
 			</div>
 		 </form>
-		 <div style="display:hidden">
-		 	<h2>1234</h2>
+		 <div id="numb" style="display:none">
+		 	<h2></h2>
 		 </div>
+		 <script type="text/javascript">
+		 	$('#check').on('keyup change', function(c) 
+		 	{
+		 		if($(q1).find('select[name="myselect"]').val() == "yes"){
+		 			console.log("yes");
+		 		}
+			   
+
+			}
+		 </script>
 	 </body>
 </html>
